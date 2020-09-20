@@ -121,10 +121,6 @@ int main()
     char *result = insertstr(original, 5, "Blabla");
     printf("Inserted : '%s'\n", result);
 
-    printf("\n");
-    printf("%d\n", sizeof(original));
-    printf("%d\n", sizeof(result));
-
     // expected results: HelloBlabla My name is Alvian and I'm 19 years old
 
     printf("\n");
