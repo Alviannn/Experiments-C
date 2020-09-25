@@ -2,8 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-typedef struct Person
-{
+typedef struct Person {
     /** the person's name */
     char name[128];
     /** the person's age */
@@ -13,13 +12,11 @@ typedef struct Person
     char *(*intro)();
 } Person;
 
-char *intro(Person person)
-{
+char *intro(Person person) {
     return "";
 }
 
-Person newPerson(char name[], int age)
-{
+Person newPerson(char name[], int age) {
     struct Person person;
 
     strcpy(person.name, name);
@@ -29,8 +26,7 @@ Person newPerson(char name[], int age)
     return person;
 }
 
-int main()
-{
+int main() {
     Person person = newPerson("Alvian Daru Quthni", 19);
     int array[40] = {0};
 

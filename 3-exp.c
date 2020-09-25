@@ -1,5 +1,5 @@
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
 /**
@@ -9,8 +9,7 @@
  * @param target  the targetted part of the string
  * @param replace the replacement
  */
-char *replacestr(char *org, char target[], char replace[])
-{
+char *replacestr(char *org, char target[], char replace[]) {
     // TODO: check if string is valid
 
     // prepares all string sizes
@@ -26,8 +25,7 @@ char *replacestr(char *org, char target[], char replace[])
     char *result;
 
     // determines the similarities or equalities
-    for (int i = 0; i < org_size; i++)
-    {
+    for (int i = 0; i < org_size; i++) {
         char part_org = org[i];
         char part_target = replace[0];
 
@@ -38,14 +36,11 @@ char *replacestr(char *org, char target[], char replace[])
         // if both parts of original and the target of the replacement matches then start counting
         // and saves the starting index if previously isn't saved
         // otherwise resets the counter and the starting index
-        if (part_org == part_target)
-        {
+        if (part_org == part_target) {
             match_counter++;
             if (starting_index == -1)
                 starting_index = i;
-        }
-        else
-        {
+        } else {
             match_counter = 0;
             starting_index = -1;
         }
@@ -79,8 +74,7 @@ char *replacestr(char *org, char target[], char replace[])
  * @param index  the insertion index
  * @param insert the string to be inserted
  */
-char *insertstr(char *org, int index, char *insert)
-{
+char *insertstr(char *org, int index, char *insert) {
     int insert_size = strlen(insert);
     int org_size = strlen(org) + 1;
     // saves the index location of the last inserted index
@@ -98,8 +92,7 @@ char *insertstr(char *org, int index, char *insert)
         result[i] = org[i];
 
     // starts inserting the supposed inserted string
-    for (int i = 0; i < insert_size; i++)
-    {
+    for (int i = 0; i < insert_size; i++) {
         last_insert = index + i;
         result[last_insert] = insert[i];
     }
@@ -111,8 +104,7 @@ char *insertstr(char *org, int index, char *insert)
     return result;
 }
 
-int main()
-{
+int main() {
     printf("\n");
 
     char *original = "Hello! My name is Alvian and I'm 19 years old!";
