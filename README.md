@@ -11,3 +11,4 @@ This is just what I've been experimenting with since learning C.
 2. Using structure and doing "pointer function"
 3. Dynamically allocate memory for arrays and makes an algorithm that inserts string to another string.
 4. Bubble sorting an array
+5. Using pointer to change a variable value
