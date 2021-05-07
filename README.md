@@ -15,4 +15,4 @@ This is just what I've been experimenting with since learning C.
 9. List files from directory and check the file stat
 10. Trying making a better `listdir` (idk if it's good)
 11. Deleting an element in the middle of the array (dynamic array)
-12. Better quicksort (this thing fails on a `struct` pointer and idk why)
+12. Better quicksort (sometimes fails and idk why)
